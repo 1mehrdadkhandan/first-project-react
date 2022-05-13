@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ContinerOne from '../components/continer';
+import NavBar from '../components/NavBar';
 import LayOut from './Layout'
 
 const thems = {
@@ -18,10 +19,12 @@ const thems = {
 }
 
 function Home() {
-  const [them, setthem] = useState('dark');
+  const [them, setthem] = useState('light');
 
   return (
+
     <LayOut>
+        <NavBar them = {thems[them]} />
         <ContinerOne them = {thems[them]}></ContinerOne>
     </LayOut>
   )
