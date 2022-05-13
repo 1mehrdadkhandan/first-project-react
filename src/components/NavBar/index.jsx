@@ -1,7 +1,7 @@
 import React from 'react'
-import { Item, Logo, Nav, NavItem, Wapper } from './elements'
-
-const NavBar = ({them}) => {
+import { Icon, Icons, Item, Logo, Nav, NavItem, Select, ThemHandel, Wapper } from './elements'
+import {BsSun,BsMoonStars}  from 'react-icons/bs'
+const NavBar = ({them,themHandel}) => {
   return (
     <Nav>
             <Wapper>
@@ -13,7 +13,13 @@ const NavBar = ({them}) => {
                     <Item to='about' > About</Item>
                     <Item to='callMe'> Call Me</Item>
                 </NavItem>
-                <ThemHandel>  </ThemHandel>
+                <ThemHandel> 
+                  <Icons onClick={themHandel}>
+                    <Icon> <BsSun /> </Icon>
+                    <Icon> <BsMoonStars /> </Icon>
+                  </Icons>
+                    <Select them = {them.name}></Select>
+                </ThemHandel>
             </Wapper>
     </Nav>
   )

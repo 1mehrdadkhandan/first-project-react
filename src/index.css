@@ -10,3 +10,6 @@ body {
 code {
   font-family: goldman;
 }
+*{ 
+  transition: all ease 0.3s;
+}
