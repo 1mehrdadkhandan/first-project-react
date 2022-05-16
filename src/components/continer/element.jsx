@@ -4,10 +4,10 @@ export const Continer = styled.div`
     width: 100%;
     height: 700px;
     max-width: 1024px;
+    background-size: cover;
 `
 export const BgimageParent = styled.div`
     width: 100%;
-    height: 100%;
     max-width: 1024px;
     margin: auto;
     position: absolute;
@@ -23,10 +23,11 @@ export const BgImg =styled.img`
     max-height: 700px;  
 `
 export const Wapper = styled.div`
+margin-top: 10px;
     display: grid;
     grid-template-columns: 3fr  5fr 1fr  ;
     width: 90%;
-    margin: auto;
+    margin:25px auto;
     
 `
 export const PanelBtn = styled.div`
@@ -58,7 +59,38 @@ export const Text = styled.div`
 export const WelomeText= styled.div`
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     color: #fff;
 `
-// export const Welome = 
+export const Welcome = styled.h3`
+    font-size: 55px;
+    font-weight: 300px;
+`
+export const TextWec = styled.p`
+    line-height: 30px;
+    font-size: 20px;
+    letter-spacing: 0.11em;
+    font-weight: 100;
+    text-align: center;
+`
+export const SocialMedia = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    align-items: center;
+    justify-content: space-evenly;
+`
+export const Line = styled.div`
+    height: 165px;
+    width: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+
+`
+export const SocialIcon = styled.span`
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+`
