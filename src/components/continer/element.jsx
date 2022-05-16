@@ -1,34 +1,21 @@
 import styled from "styled-components";
-
+import img from '../../images/background.png'
 export const Continer = styled.div`
     width: 100%;
     height: 700px;
     max-width: 1024px;
-    background-size: cover;
-`
-export const BgimageParent = styled.div`
-    width: 100%;
-    max-width: 1024px;
-    margin: auto;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+    background-size: cover;
+    background-image: url('${img}');
 `
-export const BgImg =styled.img`
-    width: 100%;
-    height: 100%;
-    max-height: 700px;  
-`
+
 export const Wapper = styled.div`
-margin-top: 10px;
+    padding-top: 100px;
     display: grid;
     grid-template-columns: 3fr  5fr 1fr  ;
     width: 90%;
     column-gap:20px    ;
-    margin:25px auto;
+    margin: 0 auto;
     @media screen and (max-width:768px){
     grid-template-columns: 3fr  5fr  ; 
     }

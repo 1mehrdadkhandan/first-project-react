@@ -2,15 +2,13 @@ import React from 'react'
 import {TextWec, WelomeText,Welcome,BgimageParent, BgImg, Continer, ImgReact, PanelBtn, ParentImg, Text, Wapper, SocialMedia, Line, SocialIcon } from './element'
 import Bg from '../../images/background.png'
 import ReactIcon from '../../images/react-logo.svg'
-import {BsInstagram,BsYoutube,BsTelegram,BsWhatsapp} from 'react-icons/bs'
+import {BsInstagram,BsYoutube,BsWhatsapp} from 'react-icons/bs'
 import {FaTelegramPlane} from 'react-icons/fa'
 
 const ContinerOne = (props) => {
   return (
     <Continer >
-      <BgimageParent>
-        <BgImg src={Bg} />
-      </BgimageParent>
+      
         <Wapper>
           <PanelBtn them = {props.them}> 
             <ParentImg>

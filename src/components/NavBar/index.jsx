@@ -1,10 +1,13 @@
-import React from 'react'
-import { Icon, Icons, Item, Logo, Nav, NavItem, Select, ThemHandel, Wapper } from './elements'
+import React, { useEffect } from 'react'
+import { Icon, Icons, Item, Logo, MenuIcon, Nav, NavItem, Select, ThemHandel, Wapper } from './elements'
 import {BsSun,BsMoonStars}  from 'react-icons/bs'
-const NavBar = ({them,themHandel}) => {
+import {BiMenuAltRight} from 'react-icons/bi'
+const NavBar = ({them,themHandel,scroll}) => {
+console.log(scroll);
+  
   return (
-    <Nav>
-            <Wapper>
+    <Nav scroll = {scroll}>
+            <Wapper >
                 <Logo them = {them}> Mehrdad Khandan </Logo>
                 <NavItem them = {them}>
                     <Item to = 'workSamples'>Work Samples</Item>
@@ -20,6 +23,7 @@ const NavBar = ({them,themHandel}) => {
                   </Icons>
                     <Select them = {them.name}></Select>
                 </ThemHandel>
+                <MenuIcon> <BiMenuAltRight />  </MenuIcon>
             </Wapper>
     </Nav>
   )

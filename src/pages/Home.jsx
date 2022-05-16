@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ContinerOne from '../components/continer';
 import NavBar from '../components/NavBar';
 import LayOut from './Layout'
@@ -22,6 +22,12 @@ const thems = {
 
 function Home() {
   const [them, setthem] = useState('light');
+  const [scroll, setscroll] = useState(0);
+  useEffect(() => {
+    window.addEventListener('scroll',()=>{
+      setscroll(window.scrollY)
+    })
+  }, [])
   const themHandel = ()=>{
     if(them ==='light'){
       setthem('dark')
@@ -33,7 +39,7 @@ function Home() {
   return (
 
     <LayOut>
-        <NavBar themHandel = {themHandel} them = {thems[them]} />
+        <NavBar scroll = {scroll} themHandel = {themHandel} them = {thems[them]} />
         <ContinerOne them = {thems[them]}></ContinerOne>
     </LayOut>
   )
