@@ -27,7 +27,11 @@ margin-top: 10px;
     display: grid;
     grid-template-columns: 3fr  5fr 1fr  ;
     width: 90%;
+    column-gap:20px    ;
     margin:25px auto;
+    @media screen and (max-width:768px){
+    grid-template-columns: 3fr  5fr  ; 
+    }
     
 `
 export const PanelBtn = styled.div`
@@ -55,6 +59,13 @@ export const ImgReact = styled.img`
 export const Text = styled.div`
     font-size:22px ;
     color: ${({them})=>(them.thirdC)};
+    @media screen and (max-width:768px){
+    
+  
+        font-size: 18px;
+        
+    }
+    
 `
 export const WelomeText= styled.div`
     display: flex;
@@ -65,7 +76,11 @@ export const WelomeText= styled.div`
 `
 export const Welcome = styled.h3`
     font-size: 55px;
-    font-weight: 300px;
+    font-weight: 200px;
+    @media screen and (max-width:768px){
+        font-size: 45px;
+        
+    }
 `
 export const TextWec = styled.p`
     line-height: 30px;
@@ -73,6 +88,10 @@ export const TextWec = styled.p`
     letter-spacing: 0.11em;
     font-weight: 100;
     text-align: center;
+    @media screen and (max-width:768px){
+        font-size: 15px;
+        
+    }
 `
 export const SocialMedia = styled.div`
     display: flex;

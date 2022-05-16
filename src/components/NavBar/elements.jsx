@@ -11,8 +11,13 @@ export const Wapper = styled.div`
 width: 90%;
 margin: auto;
  display   :grid ;
+ align-items: center;
  grid-template-columns: 2fr 5fr 80px;
  height: 50px;
+ @media screen and (max-width:768px) {
+    grid-template-columns: 2fr 5fr 60px;
+
+    }
 `
 export const Logo = styled.h3`
     color : ${({them})=>(them.titleC)};
@@ -21,16 +26,22 @@ export const Logo = styled.h3`
     margin: 0;
     display: flex;
     align-items: center;
+    @media screen and (max-width:768px) {
+        font-size: 15px;
+    }
 `
 export const NavItem = styled.div`
    display: flex;
-   
     align-items: center;
     justify-content: space-evenly;
 `
 export const Item = styled(Link)`
     font-size: 14px;
     color: #fff;
+    @media screen and (max-width:768px){
+        font-size: 12px;
+        
+    }
 `
 export const ThemHandel = styled.div`
     background-color: #fff;
@@ -38,6 +49,10 @@ export const ThemHandel = styled.div`
     height: 35px;
     border-radius:8px;
     position: relative;
+    @media screen and (max-width:768px){
+       height: 25px;
+        
+    }
 
 `
 export const Icons = styled.div`
@@ -54,7 +69,10 @@ export const Icon = styled.span`
     z-index: 4;
     font-size: 20px;
     display: flex;
-
+    @media screen and (max-width:768px){
+        font-size: 15px;
+        
+    }
 `
 export const Select = styled.div`
     background-color: #ebe9e9;

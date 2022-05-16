@@ -27,11 +27,11 @@ const ContinerOne = (props) => {
             </TextWec>
           </WelomeText>
           {/* icons Social Media */}
-          <SocialMedia>
+          <SocialMedia className='disN'>
             {/* Line  */}
             <Line></Line>
             {/* Icon instagram */}
-            <SocialIcon> <BsInstagram/> </SocialIcon>
+            <SocialIcon > <BsInstagram/> </SocialIcon>
             {/* Youtube */}
             <SocialIcon> <BsYoutube /> </SocialIcon>
             {/* WhatsApp */}
