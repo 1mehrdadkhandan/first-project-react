@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ContinerOne from '../components/continer';
 import NavBar from '../components/NavBar';
+import NavBarM from '../components/NavBarM';
 import LayOut from './Layout'
 
 const thems = {
@@ -39,6 +40,7 @@ function Home() {
   return (
 
     <LayOut>
+        <NavBarM them={thems[them]} />
         <NavBar scroll = {scroll} themHandel = {themHandel} them = {thems[them]} />
         <ContinerOne them = {thems[them]}></ContinerOne>
     </LayOut>

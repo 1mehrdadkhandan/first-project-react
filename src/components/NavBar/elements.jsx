@@ -67,6 +67,7 @@ export const Item = styled(Link)`
     align-items: center;
     flex-direction: column;
     font-size: 14px;
+    cursor: pointer;
     color: #fff;
     &::after{
     transition: all 0.3s ease;
