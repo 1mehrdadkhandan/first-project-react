@@ -1,13 +1,14 @@
 import React from 'react'
-import { CloseMenu, Continer, Item, ItemMenu, Nav } from './elements'
+import { CloseMenu, Continer, Item, ItemMenu, Nav, Title } from './elements'
  
 import {AiOutlineClose} from 'react-icons/ai'
-const NavBarM = ({them}) => {
+const NavBarM = ({them,hasOpen,toggleMenu}) => {
   
   return (
-    <Nav them= {them}>
+    <Nav hasOpen ={hasOpen} them= {them}>
         <Continer them= {them}>
-          <CloseMenu them= {them}> <AiOutlineClose />  </CloseMenu>
+          <CloseMenu onClick={toggleMenu} them= {them}> <AiOutlineClose />  </CloseMenu>
+          <Title them = {them} > Menu </Title>
           <ItemMenu them= {them}>
                     <Item them= {them} to = 'workSamples'>Work Samples</Item>
                     <Item them= {them} to='option'> Option</Item>

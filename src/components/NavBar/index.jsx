@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react'
 import { Icon, Icons, Item, Logo, MenuIcon, Nav, NavItem, Select, ThemHandel, Wapper } from './elements'
 import {BsSun,BsMoonStars}  from 'react-icons/bs'
 import {BiMenuAltRight} from 'react-icons/bi'
-const NavBar = ({them,themHandel,scroll}) => {
+const NavBar = ({them,themHandel,scroll,toggleMenu}) => {
 console.log(scroll);
   
   return (
@@ -23,7 +22,7 @@ console.log(scroll);
                   </Icons>
                     <Select them = {them.name}></Select>
                 </ThemHandel>
-                <MenuIcon> <BiMenuAltRight />  </MenuIcon>
+                <MenuIcon onClick={toggleMenu}> <BiMenuAltRight />  </MenuIcon>
             </Wapper>
     </Nav>
   )

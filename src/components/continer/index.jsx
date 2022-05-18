@@ -1,8 +1,7 @@
 import React from 'react'
-import {TextWec, WelomeText,Welcome,BgimageParent, BgImg, Continer, ImgReact, PanelBtn, ParentImg, Text, Wapper, SocialMedia, Line, SocialIcon } from './element'
-import Bg from '../../images/background.png'
+import {TextWec, WelomeText,Welcome, Continer, ImgReact, PanelBtn, ParentImg, Text, Wapper, SocialMedia, Line, SocialIcon, Panel, BtnMore } from './element'
 import ReactIcon from '../../images/react-logo.svg'
-import {BsInstagram,BsYoutube,BsWhatsapp} from 'react-icons/bs'
+import {BsInstagram,BsYoutube,BsWhatsapp , BsArrowRightShort} from 'react-icons/bs'
 import {FaTelegramPlane} from 'react-icons/fa'
 
 const ContinerOne = (props) => {
@@ -10,12 +9,22 @@ const ContinerOne = (props) => {
     <Continer >
       
         <Wapper>
-          <PanelBtn them = {props.them}> 
+          <PanelBtn >
+            {/* panel React */}
+            <Panel them = {props.them}> 
             <ParentImg>
               <ImgReact src={ReactIcon} />
             </ParentImg>
             <Text them = {props.them}> React Developer </Text>
+            </Panel>
+          {/* btn Read more  */}
+            <BtnMore them={props.them} to=''>
+               <span>Read More</span> <BsArrowRightShort fontSize={24} />
+            </BtnMore>
           </PanelBtn>
+
+
+          {/* Welcome text */}
           <WelomeText>
             <Welcome>
               Welocme 
@@ -29,13 +38,13 @@ const ContinerOne = (props) => {
             {/* Line  */}
             <Line></Line>
             {/* Icon instagram */}
-            <SocialIcon > <BsInstagram/> </SocialIcon>
+            <SocialIcon them = {props.them}  > <BsInstagram/> </SocialIcon>
             {/* Youtube */}
-            <SocialIcon> <BsYoutube /> </SocialIcon>
+            <SocialIcon them = {props.them} > <BsYoutube /> </SocialIcon>
             {/* WhatsApp */}
-            <SocialIcon> <BsWhatsapp /> </SocialIcon>
+            <SocialIcon them = {props.them} > <BsWhatsapp /> </SocialIcon>
             {/* Telegram */}
-            <SocialIcon> <FaTelegramPlane /> </SocialIcon>
+            <SocialIcon them = {props.them} > <FaTelegramPlane /> </SocialIcon>
           </SocialMedia>
         </Wapper>
     </Continer>

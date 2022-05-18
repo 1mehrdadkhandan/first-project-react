@@ -22,8 +22,12 @@ const thems = {
 }
 
 function Home() {
-  const [them, setthem] = useState('light');
+  const [them, setthem] = useState('dark');
   const [scroll, setscroll] = useState(0);
+  const [hasOpen, setOpen] = useState(false);
+  const toggleMenu = ()=>{
+    setOpen(!hasOpen)
+  }
   useEffect(() => {
     window.addEventListener('scroll',()=>{
       setscroll(window.scrollY)
@@ -39,10 +43,15 @@ function Home() {
   }
   return (
 
-    <LayOut>
-        <NavBarM them={thems[them]} />
-        <NavBar scroll = {scroll} themHandel = {themHandel} them = {thems[them]} />
-        <ContinerOne them = {thems[them]}></ContinerOne>
+    <LayOut them={thems[them]}>
+      <header>
+        <NavBarM hasOpen={hasOpen} toggleMenu= {toggleMenu} them={thems[them]} />
+        <NavBar toggleMenu= {toggleMenu} scroll = {scroll} themHandel = {themHandel} them = {thems[them]} />
+      </header>
+
+        
+        <ContinerOne them = {thems[them]} />
+        
     </LayOut>
   )
 }

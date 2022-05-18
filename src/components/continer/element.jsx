@@ -1,3 +1,4 @@
+import {Link} from "react-scroll";
 import styled from "styled-components";
 import img from '../../images/background.png'
 export const Continer = styled.div`
@@ -7,11 +8,16 @@ export const Continer = styled.div`
     position: absolute;
     background-size: cover;
     background-image: url('${img}');
+    @media screen and (max-width:600px){
+    height: 800px;
+
+    }
 `
 
 export const Wapper = styled.div`
     padding-top: 100px;
     display: grid;
+    grid-template-areas : 'panel welcome socialmedia'  ;
     grid-template-columns: 3fr  5fr 1fr  ;
     width: 90%;
     column-gap:20px    ;
@@ -19,18 +25,40 @@ export const Wapper = styled.div`
     @media screen and (max-width:768px){
     grid-template-columns: 3fr  5fr  ; 
     }
+    @media screen and (max-width:600px){
+    grid-template-columns: 1fr ; 
+    row-gap: 50px;
+    grid-template-areas : 'welcome ' 
+                         'panel' ;
+    
+    ;
+
+    }
     
 `
 export const PanelBtn = styled.div`
+grid-area: panel;
+
+ display   :flex ;
+ flex-direction: column;
+ @media screen and (max-width:600px){
+    align-items: center;
+
+    }
+`
+export const Panel= styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     background-color: ${({them})=>(them.secendC)};
     height: 340px;
+    width: 100%;
     max-width: 256px;
     border-radius: 8px;
 `
+
+
 export const ParentImg = styled.div`
     width: 100%;
     display: flex;
@@ -46,16 +74,40 @@ export const ImgReact = styled.img`
 export const Text = styled.div`
     font-size:22px ;
     color: ${({them})=>(them.thirdC)};
+
     @media screen and (max-width:768px){
-    
-  
         font-size: 18px;
-        
     }
-    
 `
+
+export const BtnMore = styled(Link)`
+    background-color: transparent;
+    border: 1px solid ${({them})=>(them.titleC)} ;
+    border-radius: 8px;
+    color: ${({them})=>(them.titleC)};
+    margin-top: 40px;
+    padding: 16px 8px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    
+    &:hover{
+        color:#ffffff;
+    }
+    @media screen and (max-width:768px){
+        font-size: 14px;
+    }
+    `
+
+    
+    
+
 export const WelomeText= styled.div`
     display: flex;
+    grid-area: welcome;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -83,6 +135,7 @@ export const TextWec = styled.p`
 export const SocialMedia = styled.div`
     display: flex;
     flex-direction: column;
+    grid-area: socialmedia;
     height: 380px;
     align-items: center;
     justify-content: space-evenly;
@@ -95,8 +148,12 @@ export const Line = styled.div`
 
 `
 export const SocialIcon = styled.span`
+cursor: pointer;
     font-size: 25px;
     width: 25px;
     height: 25px;
     color: #fff;
+    &:hover{
+    color: ${({them})=>(them.titleC)};
+    }
 `

@@ -32,6 +32,7 @@ margin:  auto;
     
 `
 export const MenuIcon = styled.div`
+    cursor: pointer;
     font-size: 18px;
     color: #fff;
     display: none;
