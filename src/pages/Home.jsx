@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ContinerOne from '../components/continer';
 import NavBar from '../components/NavBar';
 import NavBarM from '../components/NavBarM';
+import Title from '../components/Titles';
 import LayOut from './Layout'
 
 const thems = {
@@ -49,9 +50,9 @@ function Home() {
         <NavBar toggleMenu= {toggleMenu} scroll = {scroll} themHandel = {themHandel} them = {thems[them]} />
       </header>
 
-        
         <ContinerOne them = {thems[them]} />
-        
+        <Title  id='workSamples' them={thems[them]} > WorkSpace </Title>
+
     </LayOut>
   )
 }

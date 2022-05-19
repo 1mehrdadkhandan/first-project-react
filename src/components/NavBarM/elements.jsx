@@ -1,4 +1,4 @@
-import Link from "react-scroll/modules/components/Link";
+import {Link} from "react-scroll";
 import styled from "styled-components";
 
 

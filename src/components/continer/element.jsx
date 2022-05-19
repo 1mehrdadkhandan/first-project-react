@@ -1,15 +1,23 @@
 import {Link} from "react-scroll";
 import styled from "styled-components";
 import img from '../../images/background.png'
+export const Parent = styled.div`
+    height: 700px;
+    @media screen and (max-width:600px){
+    height: 900px;
+
+    }
+`
 export const Continer = styled.div`
     width: 100%;
-    height: 700px;
     max-width: 1024px;
     position: absolute;
     background-size: cover;
     background-image: url('${img}');
+    height: 700px;
+
     @media screen and (max-width:600px){
-    height: 800px;
+    height: 900px;
 
     }
 `

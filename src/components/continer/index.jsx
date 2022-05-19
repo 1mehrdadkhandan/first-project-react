@@ -1,11 +1,12 @@
 import React from 'react'
-import {TextWec, WelomeText,Welcome, Continer, ImgReact, PanelBtn, ParentImg, Text, Wapper, SocialMedia, Line, SocialIcon, Panel, BtnMore } from './element'
+import {TextWec, WelomeText,Welcome, Continer, ImgReact, PanelBtn, ParentImg, Text, Wapper, SocialMedia, Line, SocialIcon, Panel, BtnMore, Parent } from './element'
 import ReactIcon from '../../images/react-logo.svg'
 import {BsInstagram,BsYoutube,BsWhatsapp , BsArrowRightShort} from 'react-icons/bs'
 import {FaTelegramPlane} from 'react-icons/fa'
 
 const ContinerOne = (props) => {
   return (
+    <Parent>
     <Continer >
       
         <Wapper>
@@ -48,6 +49,7 @@ const ContinerOne = (props) => {
           </SocialMedia>
         </Wapper>
     </Continer>
+    </Parent>
   )
 }
 

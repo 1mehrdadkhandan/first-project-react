@@ -81,7 +81,10 @@ export const Item = styled(Link)`
         display :block ;
         
     }
-    &:hover&::after{
+    &.active {
+        color: green;
+    }
+       &:hover&::after{
         width: 100%;
     }
     @media screen and (max-width:768px){
