@@ -9,11 +9,11 @@ console.log(scroll);
             <Wapper >
                 <Logo them = {them}> Mehrdad Khandan </Logo>
                 <NavItem them = {them}>
-                    <Item  smooth={true} offset={-120} to = 'workSamples'>Work Samples</Item>
-                    <Item smooth={true} offset={-120} to='option'> Option</Item>
-                    <Item smooth={true} offset={-120} to ='whyMe' > Why me ? </Item>
-                    <Item to='about' smooth={true} offset={-120} > About</Item>
-                    <Item to='callMe' smooth={true} offset={-120}> Call Me</Item>
+                    <Item spy ={true} activeClass='active' smooth={true} offset={-120} to = 'workSamples'>Work Samples</Item>
+                    <Item spy ={true} activeClass='active' smooth={true} offset={-120} to='option'> Option</Item>
+                    <Item spy ={true} activeClass='active' smooth={true} offset={-120} to ='whyMe' > Why me ? </Item>
+                    <Item spy ={true} activeClass='active' to='about' smooth={true} offset={-120} > About</Item>
+                    <Item spy ={true} activeClass='active' to='callMe' smooth={true} offset={-120}> Call Me</Item>
                 </NavItem>
                 <ThemHandel> 
                   <Icons onClick={themHandel}>

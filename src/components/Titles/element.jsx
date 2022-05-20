@@ -1,7 +1,7 @@
-import Link from "react-scroll/modules/components/Link";
+import { Element } from "react-scroll";
 import styled from "styled-components";
 
-export const Parent = styled(Link)`
+export const Parent = styled(Element)`
     width: 100%;
     position: relative;
     background-color: ${({them})=>(them.thirdC)};

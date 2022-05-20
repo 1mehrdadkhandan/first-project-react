@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ContinerOne from '../components/continer';
 import NavBar from '../components/NavBar';
 import NavBarM from '../components/NavBarM';
+import Slider from '../components/Slider';
 import Title from '../components/Titles';
 import LayOut from './Layout'
 
@@ -9,7 +10,7 @@ const thems = {
     light : {
         name :'light',
         titleC : '#F9C11C',
-        secendC:'#F8F8FA',
+        secendC:'#ffffff',
         thirdC:' #151D28 '
 
     },
@@ -51,7 +52,8 @@ function Home() {
       </header>
 
         <ContinerOne them = {thems[them]} />
-        <Title  id='workSamples' them={thems[them]} > WorkSpace </Title>
+        <Title id='workSamples' them={thems[them]} > WorkSpace </Title>
+        <Slider them = {thems[them]} />
 
     </LayOut>
   )

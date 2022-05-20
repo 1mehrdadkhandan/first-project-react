@@ -81,9 +81,7 @@ export const Item = styled(Link)`
         display :block ;
         
     }
-    &.active {
-        color: green;
-    }
+    &.active::after,
        &:hover&::after{
         width: 100%;
     }
