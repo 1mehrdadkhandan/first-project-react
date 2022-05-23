@@ -3,7 +3,7 @@ import Home from '../Home'
 import './layout.css'
 function LayOut(props) {
   return (
-    <div  style={{background:`${props.them.secendC}`}} className='layout'>
+    <div  style={{background:`${props.them.bgColor}`}} className='layout'>
         {props.children}
     </div>  
   )

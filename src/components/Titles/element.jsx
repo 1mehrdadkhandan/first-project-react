@@ -13,7 +13,7 @@ export const Parent = styled(Element)`
 
 `
 export const TitleText = styled.h4`
-    background-color: ${({them})=>(them.secendC)};
+    background-color: ${({them})=>(them.bgColor)};
     color: ${({them})=>(them.thirdC)};
     font-size: 18px;
     width: 85%;

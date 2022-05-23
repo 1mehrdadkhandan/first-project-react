@@ -3,8 +3,15 @@ import styled from 'styled-components'
 export const SliderDiv = styled.div`
     width: 100%;
     max-width: 1024px;
+    height: 500px;
+    @media screen and (max-width:780px) { 
     height: 400px;
-    overflow: hidden;
+        
+    }
+    @media screen and (max-width:600px) { 
+    height: 300px;
+        
+    }
 `
 export const Continer = styled.div`
 position: relative;
@@ -12,7 +19,8 @@ position: relative;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 90%;
+    overflow: hidden;
+    width: 100%;
     margin: auto;
 `
 export const Wapper = styled.div`
@@ -30,11 +38,20 @@ export const Wapper = styled.div`
         background-color:${({them})=>(them.thirdC)}
         ;padding: 6px 8px;
         border-radius: 50%;
+
     }
     
 `
+export const Items = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    `
 export const Informition = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -47,6 +64,7 @@ export const ImgSlide = styled.img`
     width: 100%;
     height: 100%;
 `
+
 export const ShowProject = styled.div`
     width: 100%;
     display: block;
@@ -72,6 +90,7 @@ export const BtnShow = styled.a`
     border: 1px solid ${({them})=>(them.titleC)};
     color: ${({them})=>(them.titleC)};
     border-radius: 8px;
+    cursor: pointer;
     background-color: transparent;
     
 `

@@ -1,11 +1,11 @@
 import React from 'react'
 import {Swiper,SwiperSlide} from 'swiper/react'
-import { BtnShow, Continer, ImgSlide, Informition, ShowProject, SliderDiv, TitleProject, Wapper } from './element'
+import { BtnShow, Continer, ImgSlide, Informition, Items, ShowProject, SliderDiv, TitleProject, Wapper } from './element'
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./style.css";
-import img from '../../images/project.png'
+
 
 import { Navigation, Pagination } from "swiper";
 import "swiper/css/pagination";
@@ -20,7 +20,6 @@ function Slider({them}) {
         slidesPerView={3}
         spaceBetween={30}
         slidesPerGroup={3}
-        loop={true}
         loopFillGroupWithBlank={true}
         pagination={{
           clickable: true,
@@ -31,12 +30,14 @@ function Slider({them}) {
       >
     
         {data.map((item)=>{
+          console.log(item)
            return(
             <SwiperSlide  >
             {/* Img And btn Show project */}
+            <Items>
             <Informition them={them} >
               {/* Img project */}
-              <ImgSlide src={img} />
+              <ImgSlide src={item.img} />
               {/* layer Background */}
               <ShowProject>
                 {/* btn show project */}
@@ -44,6 +45,7 @@ function Slider({them}) {
               </ShowProject>
             </Informition>
             <TitleProject them={them} > {item.title} </TitleProject>
+            </Items>
           </SwiperSlide>
           )
       })}
