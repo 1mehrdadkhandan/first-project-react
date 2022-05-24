@@ -2,9 +2,9 @@ import React from 'react'
 import { data } from './data'
 import { Countiner, Item, Title, Wapper ,Icon } from './element'
 
-const Option = ({them}) => {
+const Option = ({them,id}) => {
   return (
-    <Countiner them={them}>  
+    <Countiner  id ={id} them={them}>  
         <Wapper>
             {data.map(item=>{
               console.log(item);

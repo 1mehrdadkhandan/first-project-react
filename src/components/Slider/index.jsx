@@ -10,9 +10,9 @@ import "./style.css";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css/pagination";
 import { data } from './data';
-function Slider({them}) {
+function Slider({them,id}) {
   return (
-    <SliderDiv >
+    <SliderDiv  id ={id} >
         <Continer>
             <Wapper them={them}>
               

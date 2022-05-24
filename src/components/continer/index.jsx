@@ -1,6 +1,6 @@
 import React from 'react'
 import {TextWec, WelomeText,Welcome, Continer, ImgReact, PanelBtn, ParentImg, Text, Wapper, SocialMedia, Line, SocialIcon, Panel, BtnMore, Parent } from './element'
-import ReactIcon from '../../images/react-logo.svg'
+import ReactIcon from '../../images/react-2.svg'
 import {BsInstagram,BsYoutube,BsWhatsapp , BsArrowRightShort} from 'react-icons/bs'
 import {FaTelegramPlane} from 'react-icons/fa'
 
