@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 export const Countiner = styled.section`
-    background-color: ${({them})=>(them.thirdC)}
+    background-color: ${({them})=>(them.name==='dark' ? them.secendC:them.thirdC )}
     ;
     min-height: 240px;
     width: 100%;
