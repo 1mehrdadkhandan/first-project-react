@@ -36,6 +36,10 @@ export const Logo =  styled.a`
     text-decoration: none;
     color : ${({them})=>(them.thirdC)};
     font-size: 56px;
+    @media screen and (max-width: 418px ) {
+    font-size: 40px;
+        
+    }
     &:hover{
     color: ${({them})=>(them.titleC)};
     } 
@@ -48,5 +52,8 @@ export const Name = styled.p`
 export const AddresEmail = styled.p`
     color : ${({them})=>(them.thirdC)};
     font-size: 25px;
-    
+    @media screen and (max-width: 418px ) {
+    font-size: 16px;
+        
+    }
 `

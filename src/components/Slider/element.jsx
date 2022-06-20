@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const SliderDiv = styled.div`
@@ -56,6 +57,11 @@ export const Informition = styled.div`
     align-items: center;
     height: 100%;
     width: 100%;
+    max-height: 320px;
+    @media screen and (max-width:600px) {
+    max-height: 160px;
+        
+    }
     background-size:cover;
     position: relative;
     
@@ -63,6 +69,7 @@ export const Informition = styled.div`
 export const ImgSlide = styled.img`
     width: 100%;
     height: 100%;
+ 
 `
 
 export const ShowProject = styled.div`
@@ -84,13 +91,14 @@ export const ShowProject = styled.div`
         opacity: 1;
     }
 `
-export const BtnShow = styled.a`
+export const BtnShow = styled(Link)`
     padding: 8px 4px;
     font-size: 16px;
     border: 1px solid ${({them})=>(them.titleC)};
     color: ${({them})=>(them.titleC)};
     border-radius: 8px;
     cursor: pointer;
+    text-decoration: none;
     background-color: transparent;
     
 `

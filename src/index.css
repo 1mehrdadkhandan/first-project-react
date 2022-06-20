@@ -1,20 +1,24 @@
 @font-face {
-  font-family: goldman;
-  src: url(fonts/Goldman-Bold.ttf);
+    font-family: goldman;
+    src: url(fonts/Goldman-Bold.ttf);
 }
+
 body {
-  margin: 0;
-  font-family: goldman  ;
+    margin: 0;
+    font-family: goldman;
+    position: relative;
 }
 
 code {
-  font-family: goldman;
+    font-family: goldman;
 }
-*{ 
-  transition: all ease 0.3s;
+
+* {
+    transition: all ease 0.3s;
 }
+
 @media screen and (max-width:768px) {
     .disN {
-    display: none !important;
-  }
+        display: none !important;
+    }
 }

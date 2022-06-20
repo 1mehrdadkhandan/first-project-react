@@ -19,11 +19,11 @@ const ContinerOne = (props) => {
             <Text them = {props.them}> React Developer </Text>
             </Panel>
           {/* btn Read more  */}
-            <BtnMore them={props.them} to=''>
-               <span>Read More</span> <BsArrowRightShort fontSize={24} />
+            <BtnMore them={props.them} to ='signup' >
+               <span>Sign Up</span> <BsArrowRightShort fontSize={24} />
             </BtnMore>
           </PanelBtn>
-
+        
 
           {/* Welcome text */}
           <WelomeText>

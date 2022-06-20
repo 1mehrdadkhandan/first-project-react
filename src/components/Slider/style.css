@@ -1,9 +1,15 @@
-.mySwiper , mySwiper div{
-    height:  100%;
+.mySwiper {
+    height: 80%;
     margin: auto;
     max-width: 1024px;
-
 }
-.swiper{
+
+.swiper {
     position: inherit;
-} 
+}
+
+@media screen and (max-width:600px) {
+    .swiper-slide {
+        height: 250px;
+    }
+}

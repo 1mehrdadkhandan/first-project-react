@@ -1,4 +1,5 @@
 import {Link} from "react-scroll";
+import {Link as Rt} from "react-router-dom";
 import styled from "styled-components";
 import img from '../../images/background.png'
 export const Parent = styled.div`
@@ -88,10 +89,11 @@ export const Text = styled.div`
     }
 `
 
-export const BtnMore = styled(Link)`
+export const BtnMore = styled(Rt)`
     background-color: transparent;
     border: 1px solid ${({them})=>(them.titleC)} ;
     border-radius: 8px;
+    text-decoration: none;
     color: ${({them})=>(them.titleC)};
     margin-top: 40px;
     padding: 16px 8px;

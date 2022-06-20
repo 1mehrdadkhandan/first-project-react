@@ -8,9 +8,9 @@ const CallMe = ({them,id}) => {
         <Wapper>
             <SocialMedia>
               {/* get data file */}
-              {dataSocialMedia.map(item=>{
+              {dataSocialMedia.map((item,index)=>{
                   return(
-                <Item>
+                <Item key={index}>
                   {/* item.icon is Icon social media ex = <Instagram /> */}
                     <Logo them= {them} href={item.link} > {item.icon} </Logo>
                     <Name them= {them} >  {item.name} </Name>

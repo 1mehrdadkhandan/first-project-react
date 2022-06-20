@@ -1,0 +1,3 @@
+دکمه sign up 
+و
+show project داخل اسلایدر برای route تنظیم  شده

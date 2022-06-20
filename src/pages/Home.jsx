@@ -9,81 +9,54 @@ import Option from '../components/Option';
 import Slider from '../components/Slider';
 import Title from '../components/Titles';
 import LayOut from './Layout'
+import {Outlet} from 'react-router-dom'
 
-const thems = {
-    light : {
-        name :'light',
-        bgColor:'#F8F8FA',
-        titleC : '#F9C11C',
-        secendC:'#ffffff',
-        thirdC:' #151D28 '
 
-    },
-    dark: {
-      name:'dark',
-      bgColor:'#222222',
-      titleC : '#EE8F66',
-      secendC:'#292929',
-      thirdC:' #E8E8E8 '
-
-    }
-}
-
-function Home() {
-  const [them, setthem] = useState('dark');
+function Home({thems,them,themHandel}) {
   const [scroll, setscroll] = useState(0);
   const [hasOpen, setOpen] = useState(false);
-  const toggleMenu = ()=>{
+  const toggleMenu = () => {
     setOpen(!hasOpen)
   }
   useEffect(() => {
-    window.addEventListener('scroll',()=>{
+    window.addEventListener('scroll', () => {
       setscroll(window.scrollY)
     })
-    window.addEventListener('resize',()=>{
-      console.log (window.innerWidth)
+    window.addEventListener('resize', () => {
     })
   }, [])
-  const themHandel = ()=>{
-    if(them ==='light'){
-      setthem('dark')
-    }else{
-      setthem('light')
-
-    }
-  }
+ 
   return (
 
     <LayOut them={thems[them]}>
+      <Outlet />
+
       <header>
-        <NavBarM hasOpen={hasOpen} toggleMenu= {toggleMenu} them={thems[them]} />
-        <NavBar toggleMenu= {toggleMenu} scroll = {scroll} themHandel = {themHandel} them = {thems[them]} />
+        <NavBarM hasOpen={hasOpen} toggleMenu={toggleMenu} them={thems[them]} />
+        <NavBar toggleMenu={toggleMenu} scroll={scroll} themHandel={themHandel} them={thems[them]} />
       </header>
-
-        <ContinerOne them = {thems[them]} />
-        <Title  them={thems[them]} > work Samples </Title>
-        <Slider id='workSamples' them = {thems[them]} />
-        <Title  them={thems[them]} > Option </Title>
-        <Option id='option'  them={thems[them]} />
-        {data.map((item,index)=>{
-          // for link scroll 
-          let next;
-          // if last item next = Call me
-          if(index !== data.length-1 ){
-             next = data[index  + 1 ].id
-          }else{
-            next = 'callMe'
-          }
-          return (
-        <>
-        <Title  them={thems[them]} > {item.title} </Title>
-        <Informition next = {next} data={item}  them = {thems[them]} /> 
-        </> )
-        })}
-        <Title  them={thems[them]} > Call Me </Title>
-        <CallMe id='callMe'  them={thems[them]} />
-
-        
+      <ContinerOne them={thems[them]} />
+      <Title them={thems[them]} > work Samples </Title>
+      <Slider id='workSamples' them={thems[them]} />
+      <Title them={thems[them]} > Option </Title>
+      <Option id='option' them={thems[them]} />
+      {data.map((item, index) => {
+        // for link scroll 
+        let next;
+        // if last item next = Call me
+        if (index !== data.length - 1) {
+          next = data[index + 1].id
+        } else {
+          next = 'callMe'
+        }
+        return (
+          <React.Fragment key={index}>
+            <Title them={thems[them]} > {item.title} </Title>
+            <Informition next={next} data={item} them={thems[them]} />
+          </React.Fragment>)
+      })}
+      <Title them={thems[them]} > Call Me </Title>
+      <CallMe id='callMe' them={thems[them]} />
 
     </LayOut>
   )

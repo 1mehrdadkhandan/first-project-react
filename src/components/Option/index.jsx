@@ -6,10 +6,9 @@ const Option = ({them,id}) => {
   return (
     <Countiner  id ={id} them={them}>  
         <Wapper>
-            {data.map(item=>{
-              console.log(item);
+            {data.map((item,index)=>{
 return(       
-          <Item>
+          <Item key={index}>
             <Icon src={item.icon} />
             <Title  them={them} > {item.name} </Title>
           </Item>)
